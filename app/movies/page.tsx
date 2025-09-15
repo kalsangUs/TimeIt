@@ -11,8 +11,8 @@ import {
 import { useState, useEffect, useRef } from "react";
 
 import { Label } from "@/components/ui/label";
-import { Toggle } from "@/components/ui/toggle";
 import { Slider } from "@/components/ui/slider";
+import Image from "next/image";
 
 interface Movie {
   id: number | string;
@@ -218,7 +218,7 @@ export default function Movies() {
                 className="bg-white/90 border border-gray-200 rounded-xl shadow-sm flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-200"
               >
                 {movie.poster_path ? (
-                  <img
+                  <Image
                     src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                     alt={movie.title}
                     loading="lazy"
